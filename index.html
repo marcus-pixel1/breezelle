@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breezelle™ | Salon-Grade Hair Care Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;700&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --primary: #ffb347;
+            --primary-dark: #ff8c00;
+            --secondary: #6a11cb;
+            --accent: #ff4e50;
+            --text-dark: #2d3748;
+            --text-light: #f7fafc;
+            --background-light: #ffffff;
+            --background-dark: #0f172a;
+            --background-feature: #f8f9fa;
+            --border-light: #edf2f7;
+        }
+
+        .dark {
+            --text-dark: #f7fafc;
+            --text-light: #2d3748;
+            --background-light: #0f172a;
+            --background-dark: #1a202c;
+            --background-feature: #1e293b;
+            --border-light: #2d3748;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            transition: background-color 0.3s ease;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .primary-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        }
+
+        .feature-gradient {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(ellipse at center, rgba(255,179,71,0.2) 0%, rgba(255,140,0,0.1) 70%, rgba(255,255,255,0) 100%);
+        }
+
+        .card {
+            background-color: var(--background-light);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Custom Button */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .btn-primary:hover::after {
+            opacity: 1;
+        }
+
+        /* Light Indicator */
+        .light-indicator {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+            background: conic-gradient(
+                #ff0000 0deg 20deg,
+                #ff7f00 20deg 40deg, 
+                #ffff00 40deg 60deg,
+                #00ff00 60deg 80deg,
+                #0000ff 80deg 100deg,
+                #4b0082 100deg 120deg,
+                #8f00ff 120deg 140deg,
+                #ff0000 140deg 360deg
+            );
+            animation: rotate 10s linear infinite;
+        }
+
+        .light-indicator::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Product Rotation */
+        .product-rotate-container {
+            perspective: 1000px;
+        }
+        
+        .product-rotate {
+            transform-style: preserve-3d;
+            animation: rotate3d 15s infinite linear;
+        }
+        
+        @keyframes rotate3d {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            font-variant-numeric: tabular-nums;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        /* Social Proof Stars */
+        .stars {
+            color: var(--primary);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--background-light);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+            border-radius: 4px;
+        }
+
+        /* Tech Spec Icons Animation */
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-icon:hover {
+            transform: scale(1.1);
+            color: var(--primary);
+        }
+
+        /* Dark Mode Toggle */
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--background-light);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mode-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Nav Bar */
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            transition: width 0.3s ease;
+        }
+
+        .nav-item:hover::after {
+            width: 100%;
+        }
+
+        /* CTA Button Pulse */
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 179, 71, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 179, 71, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 179, 71, 0); }
+        }
+
+        /* Benefit Fade-In */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Comparison Slider */
+        .comparison-slider {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .comparison-slider .before,
+        .comparison-slider .after {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        }
+
+        .comparison-slider .before {
+            left: 0;
+            background-position: left center;
+            width: 50%;
+        }
+
+        .comparison-slider .after {
+            right: 0;
+            background-position: right center;
+        }
+
+        .comparison-slider .slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: white;
+            cursor: ew-resize;
+        }
+
+        .comparison-slider .slider-handle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-slider .slider-handle::before {
+            content: '↔️';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="mode-toggle" id="modeToggle">
+        <i class="fas fa-moon text-xl"></i>
+    </div>
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center text-white font-bold">B</div>
+                    <span class="text-xl font-bold tracking-tight">Breezelle<span class="text-xs align-top">™</span></span>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="nav-item font-medium">Features</a>
+                    <a href="#technology" class="nav-item font-medium">Technology</a>
+                    <a href="#design" class="nav-item font-medium">Design</a>
+                    <a href="#testimonials" class="nav-item font-medium">Reviews</a>
+                    <a href="#faq" class="nav-item font-medium">FAQ</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <a href="#shop" class="btn-primary pulse-animation hidden sm:block">
+                        SHOP NOW <span class="ml-1 text-xs">20% OFF</span>
+                    </a>
+                    <button class="md:hidden">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 hero-gradient relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h5 class="text-xs uppercase tracking-widest mb-4 font-medium text-gray-500 dark:text-gray-400">Introducing the revolution</h5>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Salon-Grade Hair Care, <span class="gradient-text">Powered by Breezelle™</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-600 dark:text-gray-300">
+                        <span class="font-medium">Dry Faster</span> • 
+                        <span class="font-medium">Style Smarter</span> • 
+                        <span class="font-medium">Protect Better</span>
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#shop" class="btn-primary text-center px-8 py-4 text-lg">
+                            SHOP NOW <i class="fas fa-long-arrow-alt-right ml-2"></i>
+                        </a>
+                        <div class="flex flex-col">
+                            <div class="flex items-center">
+                                <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm font-medium rounded-full">
+                                    20% Launch Discount
+                                </span>
+                                <span class="ml-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm font-medium">
+                                    Free Styling Kit
+                                </span>
+                            </div>
+                            <p class="text-sm mt-2 text-gray-500 dark:text-gray-400">
+                                <i class="fas fa-shipping-fast mr-1"></i> Free shipping worldwide
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="animate-float">
+                        <img src="https://images.unsplash.com/photo-1522338140262-f46f5913618a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Breezelle Hair Dryer" 
+                             class="rounded-xl shadow-2xl max-w-full">
+                        <div class="absolute -top-4 -right-4 bg-white dark:bg-gray-800 rounded-full px-4 py-2 shadow-lg">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-bolt text-yellow-500"></i>
+                                <span class="font-bold">3x Faster</span>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 rounded-full px-4 py-2 shadow-lg">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt text-blue-500"></i>
+                                <span class="font-bold">Scalp Protection</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full -z-10 rounded-full bg-gradient-to-r from-yellow-300 to-orange-400 blur-3xl opacity-30"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative elements -->
+        <div class="hidden lg:block absolute top-20 right-20 transform rotate-12 opacity-10">
+            <i class="fas fa-wind text-9xl"></i>
+        </div>
+        <div class="hidden lg:block absolute bottom-10 left-10 transform -rotate-12 opacity-10">
+            <i class="fas fa-hair text-9xl"></i>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h6 class="text-sm font-medium tracking-widest text-gray-500 dark:text-gray-400 uppercase mb-3">Breakthrough Technology</h6>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">THE FUTURE OF HAIR DRYING IS HERE</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto"></div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12 max-w-5xl mx-auto">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center">
+                    <span class="gradient-text">AirWrap Tech™</span> Professional Care System
+                </h3>
+
+                <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-10 mb-10">
+                    <div class="flex-1 flex items-start space-x-4">
+                        <div class="text-4xl text-yellow-500 dark:text-yellow-400">
+                            <i class="fas fa-fan tech-icon"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">110,000 RPM Turbo Engine</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Professional-grade motor delivers unmatched power while remaining energy efficient.</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 flex items-start space-x-4">
+                        <div class="text-4xl text-blue-500 dark:text-blue-400">
+                            <i class="fas fa-atom tech-icon"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">200M Negative Ions</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Advanced ionic technology eliminates frizz and seals cuticles for exceptional shine.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center mb-10">
+                    <div class="text-center px-8 py-6 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/30 dark:to-orange-900/30 rounded-xl border border-yellow-100 dark:border-yellow-800">
+                        <p class="text-xl font-bold mb-2">
+                            <i class="fas fa-equals mr-2 text-yellow-500"></i>
+                            <span class="text-3xl font-bold gradient-text">3x Faster Drying</span>
+                            <span class="ml-2 text-xl">+ Silkier Finish</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6">
+                    <div class="flex items-center space-x-3 bg-gray-50 dark:bg-gray-700/50 px-6 py-4 rounded-xl">
+                        <div class="text-3xl text-green-500">
+                            <i class="fas fa-shield-alt tech-icon"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">SmartGuard™ Thermal Control</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">100x/sec Temperature Monitoring</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center px-5 py-3 bg-green-50 dark:bg-green-900/30 rounded-lg text-sm border border-green-100 dark:border-green-800">
+                        <p class="font-medium">
+                            <i class="fas fa-flask text-green-500 mr-1"></i>
+                            Lab Tested: 98% Scalp Moisture Retention
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Specs Grid Section -->
+    <section id="technology" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3">Advanced Engineering</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Every component designed with precision for optimal performance
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Tech Spec 1 -->
+                <div class="card p-8 rounded-2xl transition-all hover:bg-gradient-to-br from-yellow-50 to-orange-50 dark:hover:from-yellow-900/30 dark:hover:to-orange-900/30">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 bg-gradient-to-br from-yellow-400 to-orange-500 w-16 h-16 rounded-xl flex items-center justify-center text-white">
+                            <i class="fas fa-bolt text-3xl tech-icon"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">Lightning Dry Technology</h3>
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+                                    <span>20m/s Precision Airflow</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-orange-500 rounded-full mr-2"></span>
+                                    <span>Root-to-Tip Drying Methodology</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+                                    <span>Patented Airflow Distribution System</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+                                <p>Concentrated airflow technology dries even thick hair in record time without excessive heat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Spec 2 -->
+                <div class="card p-8 rounded-2xl transition-all hover:bg-gradient-to-br from-green-50 to-teal-50 dark:hover:from-green-900/30 dark:hover:to-teal-900/30">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 bg-gradient-to-br from-green-400 to-teal-500 w-16 h-16 rounded-xl flex items-center justify-center text-white">
+                            <i class="fas fa-temperature-low text-3xl tech-icon"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">SmartGuard™ Dynamic Thermal System</h3>
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                                    <span>57℃ Golden Temperature Maintenance</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-teal-500 rounded-full mr-2"></span>
+                                    <span>Scalp Barrier Defense Technology</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-emerald-500 rounded-full mr-2"></span>
+                                    <span>100x/sec Real-time Adjustment</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+                                <p>Microprocessor monitors heat 100 times per second to protect your scalp's natural moisture barrier.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Spec 3 -->
+                <div class="card p-8 rounded-2xl transition-all hover:bg-gradient-to-br from-blue-50 to-indigo-50 dark:hover:from-blue-900/30 dark:hover:to-indigo-900/30">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 bg-gradient-to-br from-blue-400 to-indigo-500 w-16 h-16 rounded-xl flex items-center justify-center text-white">
+                            <i class="fas fa-atom text-3xl tech-icon"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">IonShield™ Pro</h3>
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                                    <span>200 Million Negative Ions Per Second</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-indigo-500 rounded-full mr-2"></span>
+                                    <span>Static & Frizz Elimination System</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
+                                    <span>Cuticle Sealing Technology</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+                                <p>Revolutionary ion generator neutralizes static and locks in shine for salon-perfect results every time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Spec 4 -->
+                <div class="card p-8 rounded-2xl transition-all hover:bg-gradient-to-br from-purple-50 to-pink-50 dark:hover:from-purple-900/30 dark:hover:to-pink-900/30">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 bg-gradient-to-br from-purple-400 to-pink-500 w-16 h-16 rounded-xl flex items-center justify-center text-white">
+                            <i class="fas fa-volume-down text-3xl tech-icon"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">WhisperFlow™ Acoustic Engineering</h3>
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
+                                    <span>6-Layer Noise Reduction Technology</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-pink-500 rounded-full mr-2"></span>
+                                    <span>Library-Quiet Operation</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="inline-block w-3 h-3 bg-fuchsia-500 rounded-full mr-2"></span>
+                                    <span>Conversation-Friendly Design</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+                                <p>Revolutionary acoustic chamber design reduces noise without compromising power for a peaceful styling experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology Visualization -->
+            <div class="mt-20 max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+                <h3 class="text-2xl font-bold mb-6 text-center">How Breezelle Technology Works</h3>
+                <div class="rounded-xl overflow-hidden">
+                    <div class="mermaid">
+                    graph TD
+                        A[Air Intake] --> B[Turbo Engine]
+                        B --> C[Air Compression]
+                        C --> D[Heat Generation]
+                        D --> E{SmartGuard™ Sensor}
+                        E -->|Optimal Temp| F[Heated Airflow]
+                        E -->|Too Hot| G[Auto-Adjust]
+                        G --> F
+                        F --> H[Ion Infusion]
+                        H --> I[Precision Nozzle]
+                        I --> J[Hair Drying]
+                        
+                        style A fill:#ffb347,stroke:#ff8c00
+                        style B fill:#ffb347,stroke:#ff8c00
+                        style C fill:#ffb347,stroke:#ff8c00
+                        style D fill:#f87171,stroke:#ef4444
+                        style E fill:#10b981,stroke:#059669
+                        style F fill:#60a5fa,stroke:#3b82f6
+                        style G fill:#10b981,stroke:#059669
+                        style H fill:#818cf8,stroke:#6366f1
+                        style I fill:#ffb347,stroke:#ff8c00
+                        style J fill:#f472b6,stroke:#ec4899
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Story Section -->
+    <section id="design" class="py-20 bg-white dark:bg-gray-900 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3">Sunflower Aura Design™</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Where Engineering Meets Artistry
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 product-rotate-container">
+                    <div class="product-rotate p-4">
+                        <img src="https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Breezelle 360 View" 
+                             class="rounded-xl shadow-xl">
+                        
+                        <!-- Color Options -->
+                        <div class="flex justify-center mt-6 space-x-3">
+                            <button class="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 border-2 border-white shadow-md"></button>
+                            <button class="w-8 h-8 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 border-2 border-transparent shadow-md"></button>
+                            <button class="w-8 h-8 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 border-2 border-transparent shadow-md"></button>
+                            <button class="w-8 h-8 rounded-full bg-gradient-to-r from-gray-300 to-gray-500 border-2 border-transparent shadow-md"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="light-indicator mr-4"></div>
+                            <div>
+                                <h3 class="text-xl font-bold">Smart Light Ring</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Real-Time Temperature Visualization</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-gray-200 to-gray-400 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center text-white">
+                                    <i class="fas fa-feather-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">425g Ergonomic Body</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Feather-Light Balance for Styling Marathons</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-blue-500 flex items-center justify-center text-white">
+                                    <i class="fas fa-magnet"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Magnetic Attachment System</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">8 Pro Styling Nozzles, Infinite Possibilities</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center text-white">
+                                    <i class="fas fa-hand-paper"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Comfort-Grip Handle</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Soft-touch material prevents slipping and reduces hand fatigue</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Material Quality -->
+                        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/30 dark:to-orange-900/30 p-4 rounded-xl border border-yellow-100 dark:border-yellow-800">
+                            <h4 class="font-bold mb-2">Premium Materials</h4>
+                            <div class="flex space-x-4">
+                                <div class="text-center">
+                                    <div class="w-10 h-10 mx-auto rounded-full bg-gradient-to-r from-gray-300 to-gray-500"></div>
+                                    <p class="text-xs mt-1">Aircraft-Grade Aluminum</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-10 h-10 mx-auto rounded-full bg-gradient-to-r from-amber-300 to-amber-500"></div>
+                                    <p class="text-xs mt-1">Gold-Infused Grill</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-10 h-10 mx-auto rounded-full bg-gradient-to-r from-gray-200 to-gray-300"></div>
+                                    <p class="text-xs mt-1">Silicone Accents</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Videos/Images -->
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1562088287-bde35a1ea917?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Morning Routine" 
+                                 class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1470259078422-826894b933aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Travel" 
+                                 class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-lg col-span-2">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Salon" 
+                                 class="w-full h-64 object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits -->
+                <div class="md:w-1/2 md:pl-16">
+                    <div class="p-1 rounded-xl inline-block bg-gradient-to-r from-purple-400 to-pink-500 mb-6">
+                        <div class="px-4 py-1 bg-white dark:bg-gray-800 rounded-lg">
+                            <p class="font-medium text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">REAL-LIFE BENEFITS</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-3xl font-bold mb-8">Transform Your Hair Routine</h2>
+
+                    <blockquote class="italic text-lg mb-8 pl-4 border-l-4 border-yellow-400">
+                        "Fits in Carry-Ons with Room for 3 Extra Shoes - Travelers' Holy Grail!"
+                    </blockquote>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 fade-in">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center text-green-600 dark:text-green-400">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Blow-Dry Waist-Length Hair in 5 Minutes Flat</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Even thick, dense hair dries completely in a fraction of the time.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 fade-in">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center text-green-600 dark:text-green-400">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Cool Shot Button for 2x Longer Curl Hold</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Lock in your style with the precision cool shot function.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 fade-in">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center text-green-600 dark:text-green-400">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Self-Cleaning Mode Saves 80% Maintenance Time</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Revolutionary self-cleaning function extends product life.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comparison Slider -->
+                    <div class="mt-10">
+                        <h4 class="font-bold mb-3">See the Difference: Breezelle vs. Traditional Dryers</h4>
+                        <div class="comparison-slider rounded-xl overflow-hidden shadow-lg">
+                            <div class="before bg-red-100 flex items-center justify-center">
+                                <div class="text-center">
+                                    <h5 class="font-bold text-red-700">Traditional Dryer</h5>
+                                    <p class="text-red-800">15+ minutes</p>
+                                    <p class="text-xs text-red-600">Heat damage risk</p>
+                                </div>
+                            </div>
+                            <div class="after bg-green-100 flex items-center justify-center">
+                                <div class="text-center">
+                                    <h5 class="font-bold text-green-700">Breezelle</h5>
+                                    <p class="text-green-800">5 minutes</p>
+                                    <p class="text-xs text-green-600">Scalp protection</p>
+                                </div>
+                            </div>
+                            <div class="slider-handle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section id="testimonials" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h6 class="text-sm font-medium tracking-widest text-gray-500 dark:text-gray-400 uppercase mb-3">TRUSTED BY PROFESSIONALS</h6>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">THE BEST-KEPT SECRET IN BEAUTY CIRCLES</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto"></div>
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <!-- Featured Testimonial -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 mb-12 shadow-lg">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/3 mb-6 md:mb-0">
+                            <div class="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-yellow-400">
+                                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                     alt="Emma R." 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-3">
+                                <h4 class="font-bold">Emma R.</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Celebrity Stylist</p>
+                                <div class="stars text-lg mt-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8">
+                            <blockquote class="text-2xl italic font-medium text-gray-700 dark:text-gray-300 mb-4">
+                                "Not Your Grandma's Hair Dryer - This Changes Everything"
+                            </blockquote>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                After 15 years of styling celebrities, I can confidently say the Breezelle is revolutionary. My clients are amazed by how quickly their hair dries and how much healthier it feels afterward. The scalp protection technology is a game-changer for those with sensitive scalps or color-treated hair.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                I've thrown out all my other dryers - this is the only one in my kit now.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certification & Trust Elements -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                            <i class="fas fa-certificate text-3xl"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Certified by CIC Cosmetic Testing Labs</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Meets highest industry standards for safety and performance</p>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center text-green-600 dark:text-green-400">
+                            <i class="fas fa-users text-3xl"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">1M+ Global Users</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Protecting Scalp Health and Transforming Hair Care</p>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                            <i class="fas fa-shield-alt text-3xl"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">2-Year Hassle-Free Replacement</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Our promise of quality and customer satisfaction</p>
+                    </div>
+                </div>
+
+                <!-- User Reviews Carousel -->
+                <div class="overflow-hidden">
+                    <div class="flex space-x-6" id="reviewsCarousel">
+                        <div class="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                            <div class="stars text-yellow-500 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 italic mb-3">"I have thick, wavy hair that used to take 30 minutes to dry. With Breezelle, I'm done in 7 minutes flat!"</p>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-sm">Sarah T.</h5>
+                                    <p class="text-xs text-gray-500">Verified Purchase</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                            <div class="stars text-yellow-500 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 italic mb-3">"As a frequent traveler, this is a game-changer. Compact, powerful, and my hair has never looked better!"</p>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-sm">Michael K.</h5>
+                                    <p class="text-xs text-gray-500">Verified Purchase</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                            <div class="stars text-yellow-500 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 italic mb-3">"My scalp used to get so irritated from blow drying. The SmartGuard technology has completely eliminated that problem."</p>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-sm">Jennifer A.</h5>
+                                    <p class="text-xs text-gray-500">Verified Purchase</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section id="shop" class="py-20 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-gray-800 dark:to-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+                    <!-- Product Image Side -->
+                    <div class="md:w-1/2 relative">
+                        <img src="https://images.unsplash.com/photo-1583209814683-c023dd293cc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Breezelle Gift Package" 
+                             class="w-full h-full object-cover">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
+                            <h3 class="text-2xl font-bold mb-2">Breezelle Pro Package</h3>
+                            <div class="flex items-center mb-2">
+                                <span class="text-3xl font-bold mr-2">$199</span>
+                                <span class="text-lg line-through text-gray-300">$249</span>
+                                <span class="ml-2 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-xs font-bold">SAVE $50</span>
+                            </div>
+                            <div class="text-sm text-gray-200">
+                                <i class="fas fa-truck mr-1"></i> Free Shipping
+                                <i class="fas fa-shield-alt ml-3 mr-1"></i> 2-Year Warranty
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Offer Side -->
+                    <div class="md:w-1/2 p-8">
+                        <div class="bg-gradient-to-r from-yellow-100 to-orange-100 dark:from-yellow-900/30 dark:to-orange-900/30 p-2 rounded-lg inline-block mb-4">
+                            <p class="font-bold text-sm text-orange-600 dark:text-orange-400">LAUNCH EXCLUSIVE</p>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-6">Limited Time Offer</h3>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start space-x-3">
+                                <div class="text-green-500">
+                                    <i class="fas fa-check-circle text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Free $49 Magnetic Nozzle Kit <span class="text-sm text-gray-500">(3 Most-Used Attachments)</span></p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <div class="text-green-500">
+                                    <i class="fas fa-check-circle text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Free Worldwide Shipping</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <div class="text-green-500">
+                                    <i class="fas fa-check-circle text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">14-Day Risk-Free Trial</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Countdown Timer -->
+                        <div class="mb-8">
+                            <p class="text-sm text-gray-500 mb-2">Early Bird Units Remaining:</p>
+                            <div class="relative h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                <div class="absolute top-0 left-0 h-full w-[47.6%] bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
+                            </div>
+                            <div class="flex justify-between text-sm mt-1">
+                                <span class="font-medium">238</span>
+                                <span class="text-gray-500">/ 500</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <p class="text-sm text-gray-500 mb-2">Offer Ends In:</p>
+                            <div class="grid grid-cols-4 gap-2 countdown">
+                                <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-2 text-center">
+                                    <div class="text-2xl font-bold">02</div>
+                                    <div class="text-xs text-gray-500">DAYS</div>
+                                </div>
+                                <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-2 text-center">
+                                    <div class="text-2xl font-bold">14</div>
+                                    <div class="text-xs text-gray-500">HRS</div>
+                                </div>
+                                <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-2 text-center">
+                                    <div class="text-2xl font-bold">36</div>
+                                    <div class="text-xs text-gray-500">MIN</div>
+                                </div>
+                                <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-2 text-center">
+                                    <div class="text-2xl font-bold">07</div>
+                                    <div class="text-xs text-gray-500">SEC</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-primary w-full py-4 text-lg font-bold pulse-animation">
+                            SHOP NOW - 20% OFF
+                        </button>
+                        
+                        <div class="flex items-center justify-center space-x-3 mt-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/2560px-Stripe_Logo%2C_revised_2016.svg.png" 
+                                 alt="Stripe" 
+                                 class="h-6 opacity-70">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" 
+                                 alt="Visa" 
+                                 class="h-6 opacity-70">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" 
+                                 alt="Mastercard" 
+                                 class="h-6 opacity-70">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/1200px-American_Express_logo_%282018%29.svg.png" 
+                                 alt="American Express" 
+                                 class="h-6 opacity-70">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Everything you need to know about the Breezelle
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 transition-all hover:shadow-md">
+                        <h4 class="text-xl font-bold mb-3">How does the Breezelle compare to other premium hair dryers?</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            The Breezelle outperforms competitors with its 110,000 RPM motor (compared to typical 90,000 RPM), higher ion concentration, and patented SmartGuard™ scalp protection technology. It's also lighter at 425g and includes our unique magnetic attachment system.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 transition-all hover:shadow-md">
+                        <h4 class="text-xl font-bold mb-3">What's included in the box?</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Your Breezelle comes with the main unit, concentrator nozzle, diffuser attachment, styling comb attachment, heat-resistant travel case, user manual, and 2-year warranty card. During our launch period, you'll also receive the bonus $49 Magnetic Nozzle Kit with 3 additional styling attachments.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 transition-all hover:shadow-md">
+                        <h4 class="text-xl font-bold mb-3">How does the SmartGuard™ technology protect my scalp?</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Our SmartGuard™ system uses multiple NTC thermal sensors to monitor temperature 100 times per second. When the sensors detect temperatures approaching the threshold that could damage your scalp's moisture barrier (typically 60°C), the microprocessor automatically adjusts power to maintain the optimal 57°C "Golden Temperature" that dries quickly without damage.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 transition-all hover:shadow-md">
+                        <h4 class="text-xl font-bold mb-3">Is the Breezelle suitable for all hair types?</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Yes! The Breezelle was designed and tested across all hair types and textures. For curly, coily, or textured hair, we recommend using the diffuser attachment. For straight or wavy hair, the concentrator gives you precision control. The IonShield™ technology benefits all hair types by reducing frizz and enhancing shine.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 transition-all hover:shadow-md">
+                        <h4 class="text-xl font-bold mb-3">What's your return policy?</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We offer a 14-day risk-free trial. If you're not completely satisfied, simply return your Breezelle in its original packaging for a full refund. We'll even cover the return shipping costs. Additionally, all Breezelle hair dryers come with our 2-year hassle-free replacement warranty against manufacturing defects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Further Reading Section -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3">Learn More About Hair Care</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Recommended resources for understanding hair science and optimizing your styling
+                </p>
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md">
+                        <div class="h-40 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-white">
+                            <i class="fas fa-book text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold mb-2">The Science of Beautiful Hair</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                                By Dr. Amanda Richards
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                A comprehensive guide to understanding hair structure, growth cycles, and how modern technology can enhance natural beauty.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md">
+                        <div class="h-40 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-white">
+                            <i class="fas fa-microscope text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold mb-2">Heat Styling: The New Paradigm</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                                By Jennifer Keller, MSc
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                Research-based exploration of how modern heat styling technologies protect hair integrity while delivering salon results.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md">
+                        <div class="h-40 bg-gradient-to-br from-blue-400 to-teal-500 flex items-center justify-center text-white">
+                            <i class="fas fa-flask text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold mb-2">The Ionic Revolution in Hair Care</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                                By Dr. Michael Chen, PhD
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                A scientific examination of negative ion technology and its transformative impact on hair strength, shine and manageability.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md">
+                        <div class="h-40 bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center text-white">
+                            <i class="fas fa-leaf text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold mb-2">Scalp Health: The Foundation of Beautiful Hair</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                                By Dr. Sarah Williams
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                How protecting your scalp's moisture barrier leads to longer, stronger, and more vibrant hair growth.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md">
+                        <div class="h-40 bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center text-white">
+                            <i class="fas fa-graduation-cap text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold mb-2">Professional Styling Techniques</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                                By Antonio Vega, Celebrity Stylist
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                Master the same techniques used by red carpet stylists with step-by-step guides for all hair types and lengths.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges Footer -->
+    <footer class="py-12 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <h3 class="text-xl font-bold mb-6 text-gray-700 dark:text-gray-300">PROUDLY SERVING GLOBAL BEAUTY ENTHUSIASTS</h3>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="flex items-center">
+                        <i class="fas fa-lock text-green-500 text-xl mr-2"></i>
+                        <span>PCI-Certified Checkout</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-headset text-blue-500 text-xl mr-2"></i>
+                        <span>24/7 Customer Support</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-leaf text-green-500 text-xl mr-2"></i>
+                        <span>Sustainable Packaging</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <h4 class="font-bold mb-4">About Breezelle</h4>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Our Story</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Technology</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Press</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">FAQs</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Returns & Warranty</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Hair Resources</h4>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Styling Guides</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Hair Health Blog</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Video Tutorials</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Product Care</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Join Our Community</h4>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Subscribe for styling tips, exclusive offers, and new product announcements.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-grow px-4 py-2 rounded-l-lg border-t border-b border-l border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:outline-none">
+                        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-gray-500 dark:text-gray-400 text-sm">
+                <p>© 2023 Breezelle™. All rights reserved. Patents pending.</p>
+                <div class="flex justify-center space-x-6 mt-4">
+                    <a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Terms of Service</a>
+                    <a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({ 
+            theme: 'neutral',
+            startOnLoad: true,
+            securityLevel: 'loose',
+            themeVariables: {
+                primaryColor: '#ffb347',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#ff8c00',
+                lineColor: '#ff8c00',
+                secondaryColor: '#6a11cb',
+                tertiaryColor: '#f3f4f6'
+            }
+        });
+
+        // Dark Mode Toggle
+        const modeToggle = document.getElementById('modeToggle');
+        const htmlElement = document.documentElement;
+        
+        // Check system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            htmlElement.classList.add('dark');
+            modeToggle.innerHTML = '<i class="fas fa-sun text-xl text-yellow-400"></i>';
+        }
+        
+        modeToggle.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            
+            if (htmlElement.classList.contains('dark')) {
+                modeToggle.innerHTML = '<i class="fas fa-sun text-xl text-yellow-400"></i>';
+            } else {
+                modeToggle.innerHTML = '<i class="fas fa-moon text-xl"></i>';
+            }
+        });
+
+        // Fade-in Animation for Elements
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+
+        // Comparison Slider
+        const slider = document.querySelector('.slider-handle');
+        const before = document.querySelector('.comparison-slider .before');
+        
+        function handleSlide(e) {
+            const sliderRect = document.querySelector('.comparison-slider').getBoundingClientRect();
+            const position = (e.clientX - sliderRect.left) / sliderRect.width;
+            const percentage = Math.max(0, Math.min(1, position)) * 100;
+            
+            before.style.width = `${percentage}%`;
+            slider.style.left = `${percentage}%`;
+        }
+        
+        function startSlide(e) {
+            e.preventDefault();
+            
+            document.addEventListener('mousemove', handleSlide);
+            document.addEventListener('touchmove', function(e) {
+                handleSlide(e.touches[0]);
+            });
+            
+            document.addEventListener('mouseup', stopSlide);
+            document.addEventListener('touchend', stopSlide);
+        }
+        
+        function stopSlide() {
+            document.removeEventListener('mousemove', handleSlide);
+            document.removeEventListener('touchmove', handleSlide);
+        }
+        
+        if (slider) {
+            slider.addEventListener('mousedown', startSlide);
+            slider.addEventListener('touchstart', function(e) {
+                startSlide(e.touches[0]);
+            });
+        }
+
+        // Countdown Timer
+        function updateCountdown() {
+            // Just for demo purposes, we're not implementing a real countdown
+            // In a real app, you would calculate the remaining time until the promo ends
+        }
+        setInterval(updateCountdown, 1000);
+
+        // Reviews Carousel
+        const carousel = document.getElementById('reviewsCarousel');
+        let scrollPosition = 0;
+        const scrollAmount = 300;
+        
+        function autoScroll() {
+            scrollPosition += scrollAmount;
+            if (scrollPosition > carousel.scrollWidth - carousel.clientWidth) {
+                scrollPosition = 0;
+            }
+            carousel.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Auto scroll every 5 seconds
+        setInterval(autoScroll, 5000);
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar behavior on scroll
+        const header = document.querySelector('header');
+        let lastScrollY = window.scrollY;
+        
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 100) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+    </script>
+</body>
+</html>
