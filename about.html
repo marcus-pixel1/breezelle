@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Breezelle™ | Our Story, Mission & Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about-styles.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="mode-toggle" id="modeToggle">
+        <i class="fas fa-moon text-xl"></i>
+    </div>
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center text-white font-bold">B</div>
+                    <span class="text-xl font-bold tracking-tight">Breezelle<span class="text-xs align-top">™</span></span>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-item font-medium">Home</a>
+                    <a href="product-detail.html" class="nav-item font-medium">Products</a>
+                    <a href="#" class="nav-item font-medium text-yellow-500 border-b-2 border-yellow-500">About Us</a>
+                    <a href="#" class="nav-item font-medium">Technology</a>
+                    <a href="#" class="nav-item font-medium">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <a href="product-detail.html#buy-now" class="btn-primary pulse-animation hidden sm:block">
+                        SHOP NOW <span class="ml-1 text-xs">20% OFF</span>
+                    </a>
+                    <button class="md:hidden">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h5 class="text-xs uppercase tracking-widest mb-4 font-medium text-gray-500 dark:text-gray-400">Our Story</h5>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    We're Reimagining <span class="gradient-text">Hair Care Technology</span>
+                </h1>
+                <p class="text-xl mb-8 text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Breezelle was born from a simple question: Why do we accept heat damage as the price for beautiful hair? Our journey to create a better hair dryer starts with protecting what matters most—your scalp and hair health.
+                </p>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-gray-50 to-transparent dark:from-gray-800 dark:to-transparent"></div>
+        
+        <!-- Decorative elements -->
+        <div class="hidden lg:block absolute top-40 -right-20 transform rotate-12 opacity-5">
+            <i class="fas fa-wind text-9xl"></i>
+        </div>
+        <div class="hidden lg:block absolute bottom-20 -left-20 transform -rotate-12 opacity-5">
+            <i class="fas fa-feather text-9xl"></i>
+        </div>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1617220361358-8380af033e05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Breezelle Mission" 
+                                 class="w-full">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg w-64">
+                            <p class="text-lg italic font-medium text-gray-600 dark:text-gray-300">
+                                "Beauty shouldn't come at the cost of health."
+                            </p>
+                            <div class="mt-4 flex items-center">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center text-white font-bold">E</div>
+                                <div class="ml-2">
+                                    <p class="font-medium text-sm">Emily Chen</p>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">Founder & CEO</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-16">
+                    <div class="p-1 rounded-xl inline-block bg-gradient-to-r from-purple-400 to-pink-500 mb-6">
+                        <div class="px-4 py-1 bg-white dark:bg-gray-800 rounded-lg">
+                            <p class="font-medium text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">OUR MISSION</p>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Creating Technology That Cares</h2>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        We believe that healthy hair starts with a healthy scalp. That's why our mission goes beyond just drying hair quickly—we're committed to developing technologies that protect and nourish.
+                    </p>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">
+                        Breezelle was founded in 2019 by a team of engineers, stylists, and dermatologists who saw a critical problem in the beauty industry: traditional hair dryers were damaging hair and irritating scalps with excessive heat. After three years of research and development, we created our revolutionary SmartGuard™ technology that monitors and adjusts temperature 100 times per second.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+                                <i class="fas fa-leaf text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Sustainable</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Eco-friendly materials</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                                <i class="fas fa-flask text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Innovative</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Cutting-edge technology</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                                <i class="fas fa-heart text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Caring</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Hair & scalp protection</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-600 dark:text-yellow-400">
+                                <i class="fas fa-award text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Excellence</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Premium quality standards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey Timeline -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h6 class="text-sm font-medium tracking-widest text-gray-500 dark:text-gray-400 uppercase mb-3">OUR JOURNEY</h6>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">From Concept to Global Innovation</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                    Our path to revolutionizing hair care technology has been driven by passion, science, and an unwavering commitment to healthier beauty standards.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="timeline relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute h-full w-1 bg-gradient-to-b from-yellow-400 via-orange-500 to-pink-500 left-1/2 transform -translate-x-1/2"></div>
+                    
+                    <!-- Timeline Event 1 -->
+                    <div class="timeline-event relative mb-16">
+                        <div class="timeline-point absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-gray-900 border-4 border-yellow-400 z-10"></div>
+                        <div class="timeline-content md:w-5/12 md:pr-12 md:text-right md:mr-auto">
+                            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                                <div class="text-yellow-500 text-xl font-bold mb-2">2019</div>
+                                <h3 class="text-xl font-bold mb-2">The Spark of Innovation</h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    Founder Emily Chen, frustrated with her own heat-damaged hair, assembled a team of engineers, dermatologists, and professional stylists to reimagine hair drying technology from the ground up.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Event 2 -->
+                    <div class="timeline-event relative mb-16">
+                        <div class="timeline-point absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-gray-900 border-4 border-orange-400 z-10"></div>
+                        <div class="timeline-content md:w-5/12 md:pl-12 md:ml-auto">
+                            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                                <div class="text-orange-500 text-xl font-bold mb-2">2020</div>
+                                <h3 class="text-xl font-bold mb-2">The Research Breakthrough</h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    After hundreds of prototypes, our team discovered the optimal combination of airflow, temperature control, and ionic technology that would become the foundation of our SmartGuard™ system.
+                                </p>
+                                <div class="mt-4 rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a752?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                         alt="Research lab" 
+                                         class="w-full h-40 object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Event 3 -->
+                    <div class="timeline-event relative mb-16">
+                        <div class="timeline-point absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-gray-900 border-4 border-red-400 z-10"></div>
+                        <div class="timeline-content md:w-5/12 md:pr-12 md:text-right md:mr-auto">
+                            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                                <div class="text-red-500 text-xl font-bold mb-2">2021</div>
+                                <h3 class="text-xl font-bold mb-2">First Prototype & Testing</h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    The first Breezelle prototype was tested with 500 participants across diverse hair types. The results exceeded our expectations: 98% reported significantly less scalp irritation and 95% noticed improved hair health after just 30 days.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Event 4 -->
+                    <div class="timeline-event relative mb-16">
+                        <div class="timeline-point absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-gray-900 border-4 border-pink-400 z-10"></div>
+                        <div class="timeline-content md:w-5/12 md:pl-12 md:ml-auto">
+                            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                                <div class="text-pink-500 text-xl font-bold mb-2">2022</div>
+                                <h3 class="text-xl font-bold mb-2">Design & Manufacturing Excellence</h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    Partnering with world-class industrial designers and sustainable manufacturers, we refined the Breezelle into its signature Sunflower Aura Design™ and established production with strict quality control standards.
+                                </p>
+                                <div class="mt-4 rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                         alt="Manufacturing" 
+                                         class="w-full h-40 object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Event 5 -->
+                    <div class="timeline-event relative">
+                        <div class="timeline-point absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-gray-900 border-4 border-purple-400 z-10"></div>
+                        <div class="timeline-content md:w-5/12 md:pr-12 md:text-right md:mr-auto">
+                            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                                <div class="text-purple-500 text-xl font-bold mb-2">2023</div>
+                                <h3 class="text-xl font-bold mb-2">Global Launch & Recognition</h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    Breezelle launched globally to critical acclaim, receiving multiple beauty innovation awards and becoming a favorite among professional stylists. Today, we're proud to be protecting the scalp health of over 1 million users worldwide.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h6 class="text-sm font-medium tracking-widest text-gray-500 dark:text-gray-400 uppercase mb-3">OUR TEAM</h6>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">The Minds Behind Breezelle</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                    Our diverse team of experts combines scientific innovation with beauty industry experience to create products that truly make a difference.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Emily Chen - Founder & CEO" 
+                             class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                            <h3 class="text-xl font-bold text-white">Emily Chen</h3>
+                            <p class="text-yellow-300">Founder & CEO</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Former biotech engineer with 15+ years experience developing innovative consumer health products. Emily combines her engineering background with her passion for solving real-world beauty problems.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-card bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Dr. Michael Wei - Chief Technology Officer" 
+                             class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                            <h3 class="text-xl font-bold text-white">Dr. Michael Wei</h3>
+                            <p class="text-yellow-300">Chief Technology Officer</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            With a Ph.D. in Electrical Engineering and 10 patents to his name, Michael leads our R&D team. He pioneered the SmartGuard™ thermal monitoring system and continues to push the boundaries of beauty tech.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-card bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Sofia Rodriguez - Head of Design" 
+                             class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                            <h3 class="text-xl font-bold text-white">Sofia Rodriguez</h3>
+                            <p class="text-yellow-300">Head of Design</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Award-winning industrial designer who previously worked with luxury automotive and consumer electronics brands. Sofia is the creative mind behind our Sunflower Aura Design™ and ergonomic user experience.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-pink-500 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-card bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Daniel Jackson - VP of Product" 
+                             class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                            <h3 class="text-xl font-bold text-white">Daniel Jackson</h3>
+                            <p class="text-yellow-300">VP of Product</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Former executive at leading beauty tech companies with expertise in bringing innovative products to market. Daniel ensures that our technology translates into real-world results for our customers.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 5 -->
+                <div class="team-card bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Dr. Amara Johnson - Head of Dermatology Research" 
+                             class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                            <h3 class="text-xl font-bold text-white">Dr. Amara Johnson</h3>
+                            <p class="text-yellow-300">Head of Dermatology Research</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Board-certified dermatologist specializing in scalp health and hair science. Dr. Johnson's research on heat-related scalp damage has been published in leading medical journals and informs our product development.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-green-500 transition">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 6 -->
+                <div class="team-card bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Emma Roberts - Chief Sustainability Officer" 
+                             class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                            <h3 class="text-xl font-bold text-white">Emma Roberts</h3>
+                            <p class="text-yellow-300">Chief Sustainability Officer</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Environmental scientist and former sustainability consultant who ensures that Breezelle maintains the highest ecological standards. Emma leads our initiatives for eco-friendly materials, packaging, and manufacturing.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advisors Section -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold mb-8 text-center">Advisory Board</h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Advisor 1 -->
+                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 text-center">
+                        <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+                            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="James Wilson" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold">James Wilson</h4>
+                        <p class="text-sm text-yellow-500 dark:text-yellow-400 mb-2">Celebrity Stylist</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Emmy Award Winner</p>
+                    </div>
+                    
+                    <!-- Advisor 2 -->
+                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 text-center">
+                        <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+                            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Dr. Lisa Kumar" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold">Dr. Lisa Kumar</h4>
+                        <p class="text-sm text-yellow-500 dark:text-yellow-400 mb-2">Trichologist</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Hair Science Expert</p>
+                    </div>
+                    
+                    <!-- Advisor 3 -->
+                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 text-center">
+                        <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Robert Chen" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold">Robert Chen</h4>
+                        <p class="text-sm text-yellow-500 dark:text-yellow-400 mb-2">Venture Capitalist</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Tech Investor</p>
+                    </div>
+                    
+                    <!-- Advisor 4 -->
+                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 text-center">
+                        <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+                            <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Olivia Parker" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold">Olivia Parker</h4>
+                        <p class="text-sm text-yellow-500 dark:text-yellow-400 mb-2">Salon Owner</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Industry Pioneer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h6 class="text-sm font-medium tracking-widest text-gray-500 dark:text-gray-400 uppercase mb-3">OUR VALUES</h6>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">What Drives Our Innovation</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                    At Breezelle, we're guided by a set of core values that shape our products, our company culture, and our relationship with customers.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Value 1 -->
+                <div class="relative group">
+                    <div class="absolute inset-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-900 rounded-xl p-8">
+                        <div class="w-16 h-16 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-600 dark:text-yellow-400 mb-6">
+                            <i class="fas fa-flask text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Innovation with Purpose</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We don't create technology for technology's sake. Every innovation we develop must solve a real problem and make a measurable difference in our customers' lives.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="relative group">
+                    <div class="absolute inset-0.5 bg-gradient-to-r from-green-400 to-teal-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-900 rounded-xl p-8">
+                        <div class="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400 mb-6">
+                            <i class="fas fa-leaf text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Environmental Responsibility</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We believe beautiful hair and a beautiful planet can coexist. From recyclable materials to energy-efficient manufacturing, sustainability guides every decision we make.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="relative group">
+                    <div class="absolute inset-0.5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-900 rounded-xl p-8">
+                        <div class="w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6">
+                            <i class="fas fa-microscope text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Scientific Integrity</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We're committed to rigorous testing and transparency about our technology. We make claims based on evidence, not marketing hype.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Value 4 -->
+                <div class="relative group">
+                    <div class="absolute inset-0.5 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-900 rounded-xl p-8">
+                        <div class="w-16 h-16 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-6">
+                            <i class="fas fa-universal-access text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Inclusive Beauty</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We design for all hair types, textures, and styling needs. Our products are tested across diverse communities to ensure they work for everyone.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Value 5 -->
+                <div class="relative group">
+                    <div class="absolute inset-0.5 bg-gradient-to-r from-red-400 to-rose-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-900 rounded-xl p-8">
+                        <div class="w-16 h-16 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 mb-6">
+                            <i class="fas fa-heart text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Customer Well-Being</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Your health comes first. We prioritize scalp and hair wellness in every product we create, believing that true beauty comes from caring for yourself.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Value 6 -->
+                <div class="relative group">
+                    <div class="absolute inset-0.5 bg-gradient-to-r from-amber-400 to-orange-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-900 rounded-xl p-8">
+                        <div class="w-16 h-16 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 dark:text-amber-400 mb-6">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Collaborative Spirit</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Our best ideas come from collaboration—between engineers and stylists, between our team and our customers. We listen, learn, and create together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working at Breezelle -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h6 class="text-sm font-medium tracking-widest text-gray-500 dark:text-gray-400 uppercase mb-3">CAREERS</h6>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Join Our Team</h2>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Breezelle is more than just a workplace—it's a community of passionate innovators committed to redefining beauty tech. We're always looking for talented individuals who share our vision and values.
+                    </p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Growth Opportunities</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Professional development and career advancement</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Innovation Culture</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Freedom to experiment and bring new ideas to life</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Work-Life Balance</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Flexible schedules and comprehensive wellness benefits</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn-primary inline-block">
+                        View Open Positions
+                    </a>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Team Collaboration" 
+                                 class="w-full h-48 object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Team Meeting" 
+                                 class="w-full h-48 object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Brainstorming Session" 
+                                 class="w-full h-48 object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1560523159-4a9692d222f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Office Culture" 
+                                 class="w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 p-6 bg-white dark:bg-gray-900 rounded-xl">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="text-yellow-500">
+                                <i class="fas fa-quote-left text-3xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Employee Spotlight</h4>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-600 dark:text-gray-300 italic mb-4">
+                            "Working at Breezelle has been the highlight of my career. The combination of cutting-edge technology and genuine passion for customer well-being creates an environment where innovation thrives. I'm proud to be part of a team that's truly making a difference."
+                        </blockquote>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                     alt="Sarah Johnson" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="font-medium">Sarah Johnson</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Senior Product Engineer, 3 years at Breezelle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-yellow-400 to-orange-500 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Join the Hair Care Revolution</h2>
+                <p class="text-xl text-white mb-8 opacity-90">
+                    Experience the difference of technology that's designed to protect, not just perform. Your hair deserves better.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="product-detail.html" class="btn-white py-3 px-8 bg-white text-yellow-500 rounded-full font-bold hover:bg-opacity-90 transition">
+                        Shop Breezelle Pro
+                    </a>
+                    <a href="#" class="py-3 px-8 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:bg-opacity-10 transition">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-white rounded-full opacity-10"></div>
+            <div class="absolute top-40 -left-20 w-80 h-80 bg-white rounded-full opacity-10"></div>
+            <div class="absolute -bottom-20 right-20 w-60 h-60 bg-white rounded-full opacity-10"></div>
+        </div>
+    </section>
+
+    <!-- Trust Badges Footer -->
+    <footer class="py-12 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <h3 class="text-xl font-bold mb-6 text-gray-700 dark:text-gray-300">PROUDLY SERVING GLOBAL BEAUTY ENTHUSIASTS</h3>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="flex items-center">
+                        <i class="fas fa-lock text-green-500 text-xl mr-2"></i>
+                        <span>PCI-Certified Checkout</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-headset text-blue-500 text-xl mr-2"></i>
+                        <span>24/7 Customer Support</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-leaf text-green-500 text-xl mr-2"></i>
+                        <span>Sustainable Packaging</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <h4 class="font-bold mb-4">About Breezelle</h4>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Our Story</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Technology</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Press</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">FAQs</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Returns & Warranty</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Hair Resources</h4>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Styling Guides</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Hair Health Blog</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Video Tutorials</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Product Care</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Join Our Community</h4>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Subscribe for styling tips, exclusive offers, and new product announcements.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-grow px-4 py-2 rounded-l-lg border-t border-b border-l border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:outline-none">
+                        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-gray-500 dark:text-gray-400 text-sm">
+                <p>© 2023 Breezelle™. All rights reserved. Patents
