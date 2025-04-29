@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Breezelle™ Hair Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-styles.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="mode-toggle" id="modeToggle">
+        <i class="fas fa-moon text-xl"></i>
+    </div>
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-white bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center text-white font-bold">B</div>
+                    <span class="text-xl font-bold tracking-tight">Breezelle<span class="text-xs align-top">™</span></span>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-item font-medium">Home</a>
+                    <a href="product-detail.html" class="nav-item font-medium">Shop</a>
+                    <a href="#" class="nav-item font-medium">About</a>
+                    <a href="#" class="nav-item font-medium">Blog</a>
+                    <a href="contact.html" class="nav-item font-medium active text-yellow-500">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <a href="product-detail.html" class="btn-primary hidden sm:block">
+                        SHOP NOW <span class="ml-1 text-xs">20% OFF</span>
+                    </a>
+                    <button class="md:hidden">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-36 pb-12 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                We're here to help with any questions about your Breezelle products
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Methods Grid -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                <!-- Customer Support -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center transform transition-transform hover:scale-105 hover:shadow-lg">
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-headset text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Customer Support</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        For product assistance, order inquiries and general questions
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-envelope text-yellow-500 mr-2"></i>
+                            <a href="mailto:support@breezelle.com" class="hover:text-yellow-500 transition">support@breezelle.com</a>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-phone text-yellow-500 mr-2"></i>
+                            <a href="tel:+18005551234" class="hover:text-yellow-500 transition">1-800-555-1234</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Inquiries -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center transform transition-transform hover:scale-105 hover:shadow-lg">
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-briefcase text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Business Inquiries</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        For partnerships, wholesale orders, and press opportunities
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+                            <a href="mailto:business@breezelle.com" class="hover:text-blue-500 transition">business@breezelle.com</a>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-phone text-blue-500 mr-2"></i>
+                            <a href="tel:+18005552345" class="hover:text-blue-500 transition">1-800-555-2345</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Support -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center transform transition-transform hover:scale-105 hover:shadow-lg">
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Technical Support</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        For product troubleshooting and warranty service
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-envelope text-green-500 mr-2"></i>
+                            <a href="mailto:techsupport@breezelle.com" class="hover:text-green-500 transition">techsupport@breezelle.com</a>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-phone text-green-500 mr-2"></i>
+                            <a href="tel:+18005553456" class="hover:text-green-500 transition">1-800-555-3456</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Availability Notice -->
+            <div class="max-w-3xl mx-auto mb-16 text-center">
+                <h3 class="text-2xl font-bold mb-4">Customer Service Hours</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                        <h4 class="font-bold mb-2">Phone Support</h4>
+                        <div class="space-y-1 text-gray-600 dark:text-gray-300">
+                            <p>Monday - Friday: 8am - 8pm EST</p>
+                            <p>Saturday: 10am - 6pm EST</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                        <h4 class="font-bold mb-2">Email & Chat Support</h4>
+                        <div class="space-y-1 text-gray-600 dark:text-gray-300">
+                            <p>24/7 Service</p>
+                            <p>Typical Response Time: <span class="font-medium">2-4 Hours</span></p>
+                            <p>Weekend Response Time: <span class="font-medium">4-8 Hours</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instant Chat Button -->
+            <div class="text-center mb-20">
+                <button class="btn-primary py-4 px-8 text-lg flex items-center mx-auto">
+                    <i class="fas fa-comment-dots mr-2"></i>
+                    Start Live Chat Now
+                </button>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                    Average wait time: <span class="font-medium">2 minutes</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Send Us a Message</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                        We'll get back to you as quickly as possible
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Form Column -->
+                    <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8">
+                        <form id="contactForm" class="space-y-6">
+                            <!-- Name Row -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-medium mb-2">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required 
+                                           class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-400 dark:focus:ring-yellow-500 focus:border-transparent dark:bg-gray-800">
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-sm font-medium mb-2">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required 
+                                           class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-400 dark:focus:ring-yellow-500 focus:border-transparent dark:bg-gray-800">
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-400 dark:focus:ring-yellow-500 focus:border-transparent dark:bg-gray-800">
+                            </div>
+
+                            <!-- Order Number -->
+                            <div>
+                                <label for="orderNumber" class="block text-sm font-medium mb-2">Order Number (if applicable)</label>
+                                <input type="text" id="orderNumber" name="orderNumber" 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-400 dark:focus:ring-yellow-500 focus:border-transparent dark:bg-gray-800">
+                            </div>
+
+                            <!-- Subject -->
+                            <div>
+                                <label for="subject" class="block text-sm font-medium mb-2">Subject *</label>
+                                <select id="subject" name="subject" required
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-400 dark:focus:ring-yellow-500 focus:border-transparent dark:bg-gray-800">
+                                    <option value="">Please select a subject</option>
+                                    <option value="order">Order Inquiry</option>
+                                    <option value="product">Product Question</option>
+                                    <option value="troubleshooting">Technical Troubleshooting</option>
+                                    <option value="warranty">Warranty Claim</option>
+                                    <option value="feedback">Product Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2">Message *</label>
+                                <textarea id="message" name="message" rows="5" required
+                                          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-400 dark:focus:ring-yellow-500 focus:border-transparent dark:bg-gray-800"></textarea>
+                            </div>
+
+                            <!-- Attachment -->
+                            <div>
+                                <label for="attachment" class="block text-sm font-medium mb-2">Attachment (optional)</label>
+                                <div class="relative">
+                                    <input type="file" id="attachment" name="attachment" 
+                                           class="hidden" accept="image/*, application/pdf">
+                                    <label for="attachment" class="w-full flex items-center justify-center px-4 py-3 border border-dashed border-gray-300 dark:border-gray-700 rounded-lg hover:border-yellow-400 dark:hover:border-yellow-500 hover:bg-yellow-50 dark:hover:bg-yellow-900/10 cursor-pointer transition">
+                                        <i class="fas fa-paperclip mr-2 text-gray-400"></i>
+                                        <span id="fileLabel" class="text-gray-500">Attach a file (Max 5MB)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit -->
+                            <div>
+                                <button type="submit" class="btn-primary w-full py-4 text-lg font-medium">
+                                    Submit Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Info & Map Column -->
+                    <div class="flex flex-col justify-between">
+                        <!-- FAQ -->
+                        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8 mb-8">
+                            <h3 class="text-2xl font-bold mb-4">Frequently Asked Questions</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-bold mb-1">How do I track my order?</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">
+                                        You can track your order by clicking the tracking link in your shipping confirmation email or visiting our <a href="#" class="text-yellow-500 hover:underline">Order Status</a> page.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">How do I return a product?</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">
+                                        Simply visit our <a href="#" class="text-yellow-500 hover:underline">Returns Portal</a> within 14 days of receiving your order to start the hassle-free return process.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">How do I activate my warranty?</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">
+                                        Your warranty is automatically activated upon purchase. Keep your order confirmation email as proof of purchase date.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <a href="#" class="text-yellow-500 hover:underline flex items-center">
+                                    <span>View all FAQs</span>
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8">
+                            <h3 class="text-2xl font-bold mb-4">Visit Our Headquarters</h3>
+                            <address class="not-italic text-gray-600 dark:text-gray-300 mb-6">
+                                <div class="flex items-start mb-2">
+                                    <i class="fas fa-map-marker-alt text-yellow-500 mt-1 mr-2"></i>
+                                    <div>
+                                        123 Innovation Drive<br>
+                                        Suite 500<br>
+                                        San Francisco, CA 94103<br>
+                                        United States
+                                    </div>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-phone text-yellow-500 mr-2"></i>
+                                    <span>+1 (415) 555-7890</span>
+                                </div>
+                            </address>
+                            <div class="h-48 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
+                                <!-- In a real implementation, you'd add an actual map here -->
+                                <div class="w-full h-full flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+                                    <div class="p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg">
+                                        <div class="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center text-white">
+                                            <i class="fas fa-map-pin"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <a href="https://maps.google.com" target="_blank" class="text-yellow-500 hover:underline flex items-center">
+                                    <span>Get Directions</span>
+                                    <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Connect Section -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Connect With Us</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Follow us on social media for styling tips, promotions, and hair care inspiration
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" class="social-card group">
+                    <div class="bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 rounded-xl p-6 text-center">
+                        <i class="fab fa-instagram text-4xl text-white mb-4"></i>
+                        <h3 class="text-lg font-bold text-white">Instagram</h3>
+                        <p class="text-white text-opacity-80 text-sm mt-2">@breezelle</p>
+                        <div class="mt-4 inline-block text-sm px-4 py-2 bg-white bg-opacity-20 rounded-full text-white transform group-hover:scale-105 transition-transform">
+                            Follow Us
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://facebook.com" target="_blank" class="social-card group">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl p-6 text-center">
+                        <i class="fab fa-facebook-f text-4xl text-white mb-4"></i>
+                        <h3 class="text-lg font-bold text-white">Facebook</h3>
+                        <p class="text-white text-opacity-80 text-sm mt-2">@breezellehair</p>
+                        <div class="mt-4 inline-block text-sm px-4 py-2 bg-white bg-opacity-20 rounded-full text-white transform group-hover:scale-105 transition-transform">
+                            Like Page
+                        </div>
+                    </div>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://tiktok.com" target="_blank" class="social-card group">
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 text-center">
+                        <i class="fab fa-tiktok text-4xl text-white mb-4"></i>
+                        <h3 class="text-lg font-bold text-white">TikTok</h3>
+                        <p class="text-white text-opacity-80 text-sm mt-2">@breezelle</p>
+                        <div class="mt-4 inline-block text-sm px-4 py-2 bg-white bg-opacity-20 rounded-full text-white transform group-hover:scale-105 transition-transform">
+                            Watch Now
+                        </div>
+                    </div>
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://youtube.com" target="_blank" class="social-card group">
+                    <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-xl p-6 text-center">
+                        <i class="fab fa-youtube text-4xl text-white mb-4"></i>
+                        <h3 class="text-lg font-bold text-white">YouTube</h3>
+                        <p class="text-white text-opacity-80 text-sm mt-2">Breezelle Beauty</p>
+                        <div class="mt-4 inline-block text-sm px-4 py-2 bg-white bg-opacity-20 rounded-full text-white transform group-hover:scale-105 transition-transform">
+                            Subscribe
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                    Subscribe to our newsletter for exclusive offers, styling tips, and product launches
+                </p>
+                
+                <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+                    <input type="email" placeholder="Your email address" required
+                           class="flex-grow px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-yellow-400 dark:focus:ring-yellow-500 focus:border-transparent dark:bg-gray-800">
+                    <button type="submit" class="btn-primary px-6 py-3 whitespace-nowrap">
+                        Subscribe Now
+                    </button>
+                </form>
+                
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                    By subscribing, you agree to our <a href="#" class="text-yellow-500 hover:underline">Privacy Policy</a>. You can unsubscribe at any time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges Footer -->
+    <footer class="py-12 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <h3 class="text-xl font-bold mb-6 text-gray-700 dark:text-gray-300">PROUDLY SERVING GLOBAL BEAUTY ENTHUSIASTS</h3>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="flex items-center">
+                        <i class="fas fa-lock text-green-500 text-xl mr-2"></i>
+                        <span>PCI-Certified Checkout</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-headset text-blue-500 text-xl mr-2"></i>
+                        <span>24/7 Customer Support</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-leaf text-green-500 text-xl mr-2"></i>
+                        <span>Sustainable Packaging</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <h4 class="font-bold mb-4">About Breezelle</h4>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Our Story</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Technology</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Press</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">FAQs</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Returns & Warranty</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Hair Resources</h4>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Styling Guides</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Hair Health Blog</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Video Tutorials</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Product Care</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Join Our Community</h4>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Subscribe for styling tips, exclusive offers, and new product announcements.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-grow px-4 py-2 rounded-l-lg border-t border-b border-l border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:outline-none">
+                        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-500 dark:text-gray-400 dark:hover:text-yellow-400">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-gray-500 dark:text-gray-400 text-sm">
+                <p>© 2023 Breezelle™. All rights reserved. Patents pending.</p>
+                <div class="flex justify-center space-x-6 mt-4">
+                    <a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Terms of Service</a>
+                    <a href="#" class="hover:text-yellow-500 dark:hover:text-yellow-400">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact-script.js"></script>
+</body>
+</html>
